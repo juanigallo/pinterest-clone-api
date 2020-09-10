@@ -1,0 +1,18 @@
+version: "2.1"
+services:
+  api:
+    build: .
+    container_name: "pinterest-api"
+    ports:
+      - "3001:3001"
+    links:
+      - mongo
+  mongo:
+    image: "mongo"
+    container_name: "mongo-pinterest"
+    ports:
+      - "27017:27017"
+networks:
+  default:
+    external:
+      name: pinterest-network

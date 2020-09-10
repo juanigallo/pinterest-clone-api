@@ -22,7 +22,7 @@ app.set("port", port);
 
 const server = http.createServer(app);
 
-mongoose.connect("mongodb://localhost:27017/pinterest", {
+mongoose.connect("mongodb://mongo-pinterest:27017/pinterest", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
